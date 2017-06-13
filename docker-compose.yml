@@ -2,7 +2,7 @@ version: '3'
 
 services:
   example:
-    image: minimum/dynamodb-cross-region-replication
+    image: minimum/dynamodb-replication
     environment:
       SRC_REGION: us-west-2
       DEST_REGION: ap-northeast-2
