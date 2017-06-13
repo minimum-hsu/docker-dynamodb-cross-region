@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  example:
+    image: minimum/dynamodb-cross-region-replication
+    environment:
+      SRC_REGION: us-west-2
+      DEST_REGION: ap-northeast-2
+      SRC_TABLE: origin
+      DEST_TABLE: copy
+    volumes:
+      - ./.aws:/root/.aws:ro
+    restart: always
+
